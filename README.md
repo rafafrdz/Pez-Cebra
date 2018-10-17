@@ -4,8 +4,6 @@ from numpy import *
 from matplotlib.pyplot import *
 from mpl_toolkits.mplot3d import Axes3D
 
-# Rafael Fernandez Ortiz
-# Manuel Nuñez Gonzalez
 # Apartado c
 
 def u0(x):
