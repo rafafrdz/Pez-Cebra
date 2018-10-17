@@ -1,3 +1,24 @@
+# Modelo de la formación de radios en la aleta caudal del pez cebra
+
+Para el estudio, y por tanto la modelización, de las formaciones de radios en la aleta caudal del pez cebra, es sabido que sigue un sistema de ecuaciones de derivadas parciales como el que sigue:
+$$
+\frac{\partial x}{\partial t} = a(r-\overline r)(R^2 - (r-\overline r)^2-b(j-\overline j)) + \mu_1 \frac{\partial^2 r}{\partial x^2}
+$$
+
+$$
+\frac{\partial j}{\partial t} = c(r-\overline r)-d(j-\overline j) + \mu_1 \frac{\partial^2 j}{\partial x^2}
+$$
+
+donde:
+
+* La unidad de la variable $xt$ es la longitud característica de una célula
+* La unidad de la variable $t$ es el tiempo característico en el que se produce una división celular
+* $r(x,t)$ es la concentración de una sustancia activadora de la formación de células de radio en $x$ en el instante $t$, de forma que, una célula pasa a ser del tipo radio cuando el valor de r es mayor que un cierto valor crítico $\overline r$
+* $j(t,x)$ es la concentración de una sustancia inhibidora de la formación de células de radio en $x$ en el instante $t$
+* $a,b,c,d,\overline j, R, \mu_1, \mu_2$ son constantes positivas
+
+Se trata por tanto de un modelo de reacción-difusión: Las sustancias $r$ y $j$ son creadas y destruidas en las células y pasan de unas a otras a través de sus membranas por difusión.
+
 ```python
 # -*- coding: utf-8 -*-
 from numpy import *
