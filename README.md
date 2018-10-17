@@ -1,19 +1,28 @@
 # Modelo de la formación de radios en la aleta caudal del pez cebra
 
 Para el estudio, y por tanto la modelización, de las formaciones de radios en la aleta caudal del pez cebra, es sabido que sigue un sistema de ecuaciones de derivadas parciales como el que sigue:
-<p align="center"><img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/3fd1cf893dd111654a8d539bf87cc0d0.svg?invert_in_darkmode" align=middle width=350.29005pt height=35.777445pt/></p>
-
-<p align="center"><img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/23b7c9de8e03fd79f519af67b349900e.svg?invert_in_darkmode" align=middle width=239.6757pt height=35.777445pt/></p>
+$$
+\begin{equation} \label{sis11}
+\left.
+\begin{aligned}
+\frac{\partial x}{\partial t} = a(r-\overline r)(R^2 - (r-\overline r)^2-b(j-\overline j)) + \mu_1 \frac{\partial^2 r}{\partial x^2}\\
+\\
+\frac{\partial j}{\partial t} = c(r-\overline r)-d(j-\overline j) + \mu_1 \frac{\partial^2 j}{\partial x^2}
+\end{aligned}
+\right.
+\quad\text{}
+\end{equation}
+$$
 
 donde:
 
-* La unidad de la variable <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/178e553be50b61dae0734edfd972a567.svg?invert_in_darkmode" align=middle width=15.33114pt height=20.22207pt/> es la longitud característica de una célula
-* La unidad de la variable <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode" align=middle width=5.9361555pt height=20.22207pt/> es el tiempo característico en el que se produce una división celular
-* <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/d97f9c2920507770c422858be1cbe2ef.svg?invert_in_darkmode" align=middle width=43.29534pt height=24.6576pt/> es la concentración de una sustancia activadora de la formación de células de radio en <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.3951pt height=14.15535pt/> en el instante <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode" align=middle width=5.9361555pt height=20.22207pt/>, de forma que, una célula pasa a ser del tipo radio cuando el valor de r es mayor que un cierto valor crítico <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/45afd16d417643a14faef303967f027b.svg?invert_in_darkmode" align=middle width=7.8730245pt height=19.41522pt/>
-* <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/883d91f1b04662f98e1ea7399dd6fe8e.svg?invert_in_darkmode" align=middle width=43.132815pt height=24.6576pt/> es la concentración de una sustancia inhibidora de la formación de células de radio en <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/332cc365a4987aacce0ead01b8bdcc0b.svg?invert_in_darkmode" align=middle width=9.3951pt height=14.15535pt/> en el instante <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/4f4f4e395762a3af4575de74c019ebb5.svg?invert_in_darkmode" align=middle width=5.9361555pt height=20.22207pt/>
-* <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/3a6198dde5b4af22c79a43f92c59e0b4.svg?invert_in_darkmode" align=middle width=136.61076pt height=26.94318pt/> son constantes positivas
+* La unidad de la variable $xt$ es la longitud característica de una célula
+* La unidad de la variable $t$ es el tiempo característico en el que se produce una división celular
+* $r(x,t)$ es la concentración de una sustancia activadora de la formación de células de radio en $x$ en el instante $t$, de forma que, una célula pasa a ser del tipo radio cuando el valor de r es mayor que un cierto valor crítico $\overline r$
+* $j(t,x)$ es la concentración de una sustancia inhibidora de la formación de células de radio en $x$ en el instante $t$
+* $a,b,c,d,\overline j, R, \mu_1, \mu_2$ son constantes positivas
 
-Se trata por tanto de un modelo de reacción-difusión: Las sustancias <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/89f2e0d2d24bcf44db73aab8fc03252c.svg?invert_in_darkmode" align=middle width=7.8730245pt height=14.15535pt/> y <img src="https://rawgit.com/rafafrdz/Pez-Cebra/master/svgs/36b5afebdba34564d884d347484ac0c7.svg?invert_in_darkmode" align=middle width=7.710483pt height=21.68331pt/> son creadas y destruidas en las células y pasan de unas a otras a través de sus membranas por difusión.
+Se trata por tanto de un modelo de reacción-difusión: Las sustancias $r$ y $j$ son creadas y destruidas en las células y pasan de unas a otras a través de sus membranas por difusión.
 
 ```python
 # -*- coding: utf-8 -*-
