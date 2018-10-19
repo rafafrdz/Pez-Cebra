@@ -8,8 +8,8 @@ Para el estudio, y por tanto la modelización, de las formaciones de radios en l
 
 donde:
 
-* La unidad de la variable $xt$ es la longitud característica de una célula
-* La unidad de la variable $t$ es el tiempo característico en el que se produce una división celular
+* La unidad de la variable ![](http://latex.codecogs.com/gif.latex?x) es la longitud característica de una célula
+* La unidad de la variable ![](http://latex.codecogs.com/gif.latex?t) es el tiempo característico en el que se produce una división celular
 * $r(x,t)$ es la concentración de una sustancia activadora de la formación de células de radio en $x$ en el instante $t$, de forma que, una célula pasa a ser del tipo radio cuando el valor de r es mayor que un cierto valor crítico $\overline r$
 * $j(t,x)$ es la concentración de una sustancia inhibidora de la formación de células de radio en $x$ en el instante $t$
 * $a,b,c,d,\overline j, R, \mu_1, \mu_2$ son constantes positivas
