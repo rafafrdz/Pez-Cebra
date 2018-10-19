@@ -1,18 +1,7 @@
 # Modelo de la formación de radios en la aleta caudal del pez cebra
 
 Para el estudio, y por tanto la modelización, de las formaciones de radios en la aleta caudal del pez cebra, es sabido que sigue un sistema de ecuaciones de derivadas parciales como el que sigue:
-$$
-\begin{equation} \label{sis11}
-\left.
-\begin{aligned}
-\frac{\partial x}{\partial t} = a(r-\overline r)(R^2 - (r-\overline r)^2-b(j-\overline j)) + \mu_1 \frac{\partial^2 r}{\partial x^2}\\
-\\
-\frac{\partial j}{\partial t} = c(r-\overline r)-d(j-\overline j) + \mu_1 \frac{\partial^2 j}{\partial x^2}
-\end{aligned}
-\right.
-\quad\text{}
-\end{equation}
-$$
+![](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20x%7D%7B%5Cpartial%20t%7D%20%3D%20a%28r-%5Coverline%20r%29%28R%5E2%20-%20%28r-%5Coverline%20r%29%5E2-b%28j-%5Coverline%20j%29%29%20&plus;%20%5Cmu_1%20%5Cfrac%7B%5Cpartial%5E2%20r%7D%7B%5Cpartial%20x%5E2%7D)
 
 donde:
 
